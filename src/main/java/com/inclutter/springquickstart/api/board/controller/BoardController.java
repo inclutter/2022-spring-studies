@@ -1,6 +1,7 @@
 package com.inclutter.springquickstart.api.board.controller;
 
 import com.inclutter.springquickstart.api.board.model.BoardDTO;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +11,9 @@ import java.util.List;
 
 @RestController
 public class BoardController {
+    /** 토큰 암호 키 */
+    @Value("#{systemProperties['token.encrypt.key']}")
+    private String secretKey;
 
     public BoardController() {
         System.out.println("===> BoardCOntroller 생성");
@@ -17,6 +21,9 @@ public class BoardController {
 
     @GetMapping("/hello")
     public String hello(String name) {
+        if(secretKey.equals("abcd1234")){
+            System.out.println("====> secretKey : " + secretKey);
+        }
         return "Hello : " + name;
     }
 
