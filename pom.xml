@@ -15,7 +15,7 @@
     <description>spring-quick-start</description>
     <properties>
         <java.version>1.8</java.version>
-        <argLine>-Djasypt.encryptor.password="mwKang" -Dtoken.encrypt.key="abcd1234"</argLine>
+        <argLine>-Djasypt.encryptor.password="mwKang"</argLine>
     </properties>
     <dependencies>
         <dependency>
