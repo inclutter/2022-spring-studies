@@ -28,3 +28,10 @@ jasypt:
     property:
       prefix: ENC(
       suffix: )
+
+
+# Test Property Setting
+author:
+  name: TESTER
+  age: 53
+  nation: KOREA
